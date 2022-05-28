@@ -1,5 +1,6 @@
 import React from "react";
 import icon from "../img/icon-moon.svg";
+import InputAdd from "./InputAdd";
 
 const Header = () => {
   return (
@@ -19,6 +20,7 @@ const Header = () => {
         </div>
 
         {/* Input Component  */}
+        <InputAdd />
       </main>
     </div>
   );
