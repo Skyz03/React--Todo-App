@@ -1,6 +1,7 @@
 import React from "react";
 import icon from "../img/icon-moon.svg";
 import InputAdd from "./InputAdd";
+import InputList from "./InputList";
 
 const Header = () => {
   return (
@@ -21,6 +22,7 @@ const Header = () => {
 
         {/* Input Component  */}
         <InputAdd />
+        <InputList />
       </main>
     </div>
   );
