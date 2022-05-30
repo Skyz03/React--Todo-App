@@ -1,4 +1,5 @@
 import React from "react";
+import cross from "../img/icon-cross.svg";
 
 const InputAdd = (props) => {
   const [tasks, setTask] = React.useState({
@@ -32,8 +33,12 @@ const InputAdd = (props) => {
             placeholder="Create a new todo..."
             onChange={handleChange}
           />
+          <span className="absolute right-10">
+            <button className="cursor-pointer" onClick={submitTask}>
+              <img className="scale-75 rotate-45" src={cross} alt="cross-img" />
+            </button>
+          </span>
         </label>
-        <button onClick={submitTask}>Add</button>
       </form>
     </div>
   );
