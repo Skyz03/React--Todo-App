@@ -1,13 +1,12 @@
 import React from "react";
 
-const InputAdd = () => {
+const InputAdd = (props) => {
   const [tasks, setTask] = React.useState({
     task: "",
   });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    console.log(e.target.name);
     setTask((prevTask) => {
       return {
         ...prevTask,
@@ -16,6 +15,10 @@ const InputAdd = () => {
     });
   };
 
+  const submitTask = (e) => {
+    e.preventDefault();
+    props.onAdd(tasks);
+  };
   return (
     <div className="pt-8 mb-8">
       <form className="w-100" action="#">
@@ -30,7 +33,7 @@ const InputAdd = () => {
             onChange={handleChange}
           />
         </label>
-        <button>Add</button>
+        <button onClick={submitTask}>Add</button>
       </form>
     </div>
   );
