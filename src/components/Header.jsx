@@ -5,10 +5,8 @@ import InputList from "./InputList";
 import InputManage from "./InputManage";
 import tasks from "../notes";
 
-console.log(tasks);
-
 function createTask(taskItem) {
-  return <InputList task={taskItem.task} />;
+  return <InputList task={taskItem.task} key={taskItem.key} />;
 }
 
 const Header = () => {
