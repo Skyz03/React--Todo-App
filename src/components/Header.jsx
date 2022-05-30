@@ -2,6 +2,14 @@ import React from "react";
 import icon from "../img/icon-moon.svg";
 import InputAdd from "./InputAdd";
 import InputList from "./InputList";
+import InputManage from "./InputManage";
+import tasks from "../notes";
+
+console.log(tasks);
+
+function createTask(taskItem) {
+  return <InputList task={taskItem.task} />;
+}
 
 const Header = () => {
   return (
@@ -19,10 +27,11 @@ const Header = () => {
             </button>
           </div>
         </div>
-
         {/* Input Component  */}
         <InputAdd />
-        <InputList />
+        {tasks.map(createTask)}
+        <InputList task="work on the code" />
+        <InputManage />
       </main>
     </div>
   );
