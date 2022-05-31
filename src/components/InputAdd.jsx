@@ -33,7 +33,7 @@ const InputAdd = (props) => {
             placeholder="Create a new todo..."
             onChange={handleChange}
           />
-          <span className="absolute right-10">
+          <span className="absolute right-10 -bottom-0.5">
             <button className="cursor-pointer" onClick={submitTask}>
               <img className="scale-75 rotate-45" src={cross} alt="cross-img" />
             </button>

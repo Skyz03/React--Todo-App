@@ -2,7 +2,9 @@ import React from "react";
 import cross from "../img/icon-cross.svg";
 
 const InputList = (props) => {
-  function handleClick() {}
+  function handleClick() {
+    props.onDelete(props.id);
+  }
 
   return (
     <div className=" shadow-2xl shadow-black/20 md:mt-6">

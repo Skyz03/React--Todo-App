@@ -18,7 +18,13 @@ const Header = () => {
     });
   }
 
-  function deleteTask(id) {}
+  function deleteTask(id) {
+    setTaskList((prevTask) => {
+      return prevTask.filter((taskItem, index) => {
+        return index !== id;
+      });
+    });
+  }
 
   return (
     <div className="bg-hero-pattern min-h-screen bg-no-repeat bg-slate-300">
@@ -37,8 +43,15 @@ const Header = () => {
         </div>
         {/* Input Component  */}
         <InputAdd onAdd={addTask} />
-        {taskList.map((taskItem) => {
-          return <InputList task={taskItem.task} onDelete={deleteTask} />;
+        {taskList.map((taskItem, index) => {
+          return (
+            <InputList
+              key={index}
+              id={index}
+              task={taskItem.task}
+              onDelete={deleteTask}
+            />
+          );
         })}
         <InputManage />
       </main>
