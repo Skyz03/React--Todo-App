@@ -4,6 +4,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         "hero-pattern": "url('/src/img/bg-mobile-light.jpg')",
+        "hero-pattern-lg": "url('/src/img/bg-desktop-light.jpg')",
+      },
+      screens: {
+        sm: "375px",
       },
     },
     theme: {
