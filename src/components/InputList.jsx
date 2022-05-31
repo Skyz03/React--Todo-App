@@ -2,6 +2,8 @@ import React from "react";
 import cross from "../img/icon-cross.svg";
 
 const InputList = (props) => {
+  function handleClick() {}
+
   return (
     <div className=" shadow-2xl shadow-black/20 md:mt-6">
       <ul className="w-full">
@@ -9,7 +11,7 @@ const InputList = (props) => {
           <button className="rounded-full border w-5 aspect-square"></button>
           <span className="w-[75%] px-3 text-sm">{props.task}</span>
           <div className="ml-auto flex items-center gap-2">
-            <button className="cursor-pointer">
+            <button onClick={handleClick} className="cursor-pointer">
               <img src={cross} alt="cross-img" />
             </button>
           </div>

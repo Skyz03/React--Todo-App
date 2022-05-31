@@ -18,6 +18,8 @@ const Header = () => {
     });
   }
 
+  function deleteTask(id) {}
+
   return (
     <div className="bg-hero-pattern min-h-screen bg-no-repeat bg-slate-300">
       <main className="mx-auto w-[87%] max-w-[34rem] py-10 md:py-20">
@@ -36,7 +38,7 @@ const Header = () => {
         {/* Input Component  */}
         <InputAdd onAdd={addTask} />
         {taskList.map((taskItem) => {
-          return <InputList task={taskItem.task} />;
+          return <InputList task={taskItem.task} onDelete={deleteTask} />;
         })}
         <InputManage />
       </main>
