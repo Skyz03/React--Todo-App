@@ -10,13 +10,11 @@ const InputManage = () => {
 
         {window.innerWidth > 375 ? (
           <div className="flex justify-between">
-            <button className="text-xs font-bold text-light-text-primary">
-              All
-            </button>
-            <button className="text-xs font-bold  px-1 text-light-text-primary">
+            <button className="text-xs text-light-text-primary">All</button>
+            <button className="text-xs px-2 text-light-text-primary">
               Active
             </button>
-            <button className="text-xs font-bold text-light-text-primary">
+            <button className="text-xs text-light-text-primary">
               Completed
             </button>
           </div>
@@ -27,11 +25,13 @@ const InputManage = () => {
         </button>
       </div>
 
-      <div className="mt-4 bg-white px-4 py-3 flex items-center justify-center space-x-4 rounded">
-        <button className="text-xs text-light-text-primary">All</button>
-        <button className="text-xs text-light-text-primary">Active</button>
-        <button className="text-xs text-light-text-primary">Completed</button>
-      </div>
+      {window.innerWidth < 375 ? (
+        <div className="mt-4 bg-white px-4 py-3 flex items-center justify-center space-x-4 rounded">
+          <button className="text-xs text-light-text-primary">All</button>
+          <button className="text-xs text-light-text-primary">Active</button>
+          <button className="text-xs text-light-text-primary">Completed</button>
+        </div>
+      ) : null}
     </>
   );
 };

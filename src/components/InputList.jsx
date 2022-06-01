@@ -7,7 +7,7 @@ const InputList = (props) => {
   }
 
   return (
-    <div className=" shadow-2xl shadow-black/20 md:mt-6">
+    <div className="shadow-2xl shadow-black/20 ">
       <ul className="w-full">
         <li className="flex w-100 bg-white items-center py-3 px-4">
           <button className="rounded-full border w-5 aspect-square"></button>
