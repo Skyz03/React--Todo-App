@@ -8,17 +8,19 @@ const InputManage = () => {
           1 Item left
         </span>
 
-        {/* <div className="flex justify-between">
-          <button className="text-xs font-bold text-light-text-primary">
-            All
-          </button>
-          <button className="text-xs font-bold  px-1 text-light-text-primary">
-            Active
-          </button>
-          <button className="text-xs font-bold text-light-text-primary">
-            Completed
-          </button>
-        </div> */}
+        {window.innerWidth > 375 ? (
+          <div className="flex justify-between">
+            <button className="text-xs font-bold text-light-text-primary">
+              All
+            </button>
+            <button className="text-xs font-bold  px-1 text-light-text-primary">
+              Active
+            </button>
+            <button className="text-xs font-bold text-light-text-primary">
+              Completed
+            </button>
+          </div>
+        ) : null}
 
         <button className="text-xs text-light-text-primary">
           Clear Completed
